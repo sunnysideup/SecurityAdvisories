@@ -1,7 +1,7 @@
 {
     "name": "sunnysideup/security-advisories",
     "type": "metapackage",
-    "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
+    "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it. Silverstripe-friendly version with more lenient Silverstripe solutions",
     "license": "MIT",
     "keywords": [
         "dev"
