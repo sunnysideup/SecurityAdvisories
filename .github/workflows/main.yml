@@ -2,8 +2,8 @@ name: Sync Fork with Upstream
 
 on:
   schedule:
-    - cron: '0 * * * *'   # daily at 03:00 UTC
-  workflow_dispatch:        # lets you trigger it manually too
+    - cron: '0 * * * *'       
+  workflow_dispatch:          # lets you trigger it manually too
 
 permissions:
   contents: write
@@ -17,4 +17,5 @@ jobs:
       - name: Sync with upstream
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh repo sync ${{ github.repository }} --branch latest
+        # Removed --branch to let it default, or change 'main' to your target branch
+        run: gh repo sync ${{ github.repository }} --branch main
